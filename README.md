@@ -1,9 +1,6 @@
-# Encoder-Decoder Model With Skip Connection_Depth
-Monocular Depth Estimation for Autonomous Vehicles Using An Encoder-Decoder Model With Skip Connection
-
 # Monocular Depth Estimation for Autonomous Vehicles Using an Encoder-Decoder Model With Skip Connection
 
-This project implements a monocular depth estimation system for autonomous vehicles using an encoder-decoder deep learning model with skip connections. The model is designed to predict depth maps from single RGB images, leveraging the Virtual KITTI dataset for training and evaluation.
+This project implements a monocular depth estimation system for autonomous vehicles using an encoder-decoder deep learning model with skip connections. The model is designed to predict depth maps from single RGB images, leveraging the Virtual KITTI dataset for training and evaluation. 
 
 ## Features
 
@@ -18,17 +15,14 @@ This project implements a monocular depth estimation system for autonomous vehic
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset Preparation](#dataset-preparation)
-- [Training](#training)
-- [Evaluation](#evaluation)
-- [Results](#results)
 - [Acknowledgments](#acknowledgments)
 
 ## Installation
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/username/depth-estimation.git
-    cd depth-estimation
+    https://github.com/Rafid00/EDSC_Depth.git
+    cd EDSC_Depth
     ```
 
 2. Install dependencies:
@@ -53,7 +47,7 @@ dataset_directory/
                 *.png
 ```
 
-# Set the paths to your dataset in the script:
+### Set the paths to your dataset in the script:
 ```bash
 rgb_dir = 'path/to/vkitti_1.3.1_rgb'
 depth_dir = 'path/to/vkitti_1.3.1_depthgt'
@@ -61,31 +55,26 @@ depth_dir = 'path/to/vkitti_1.3.1_depthgt'
 
 ## Usage
 
-# Training
-To train the model, run the following command:
-
+### Run the script
+To run the model, run the following command:
 ```bash
-python train.py
+python depth_estimation.py
 ```
 
 This script will:
+- Load and preprocess the dataset.
+- Train the encoder-decoder model.
+- Save the best-performing model based on validation loss.
+- Run the model
 
-> Load and preprocess the dataset.
-> Train the encoder-decoder model.
-> Save the best-performing model based on validation loss.
-
-# Evaluation
-Evaluate the model using the test set:
-
+### Pre-trained Weight
+The pre-trained weight is saved as:
 ```bash
-python evaluate.py
+depth_checkpoint.pth
 ```
 
-This will compute and display metrics such as MAE, RMSE, SILog, and threshold accuracies.
-
-# Visualization
+### Visualization
 To visualize the training and validation loss:
-
 ```bash
 import matplotlib.pyplot as plt
 
@@ -99,7 +88,7 @@ plt.title('Training and Validation Loss')
 plt.show()
 ```
 
-Acknowledgments
-Virtual KITTI Dataset: Virtual KITTI Dataset
-PyTorch: PyTorch Framework
-PyTorch-MSSSIM: Library used for structural similarity loss.
+## Acknowledgments
+- Virtual KITTI Dataset: Virtual KITTI Dataset
+- PyTorch: PyTorch Framework
+- PyTorch-MSSSIM: Library used for structural similarity loss.
