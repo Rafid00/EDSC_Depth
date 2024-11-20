@@ -1,4 +1,4 @@
-# EDSC_Depth
+# Encoder-Decoder Model With Skip Connection_Depth
 Monocular Depth Estimation for Autonomous Vehicles Using An Encoder-Decoder Model With Skip Connection
 
 # Monocular Depth Estimation for Autonomous Vehicles Using an Encoder-Decoder Model With Skip Connection
