@@ -41,7 +41,6 @@ This project implements a monocular depth estimation system for autonomous vehic
 ## Dataset Preparation
 
 The model uses the Virtual KITTI dataset. Organize the dataset as follows:
-
 ```plaintext
 dataset_directory/
     vkitti_1.3.1_rgb/
@@ -52,37 +51,42 @@ dataset_directory/
         Scene01/
             Camera01/
                 *.png
-Set the paths to your dataset in the script:
+```
 
-python
-Copy code
+# Set the paths to your dataset in the script:
+```bash
 rgb_dir = 'path/to/vkitti_1.3.1_rgb'
 depth_dir = 'path/to/vkitti_1.3.1_depthgt'
-Usage
-Training
+```
+
+## Usage
+
+# Training
 To train the model, run the following command:
 
-bash
-Copy code
+```bash
 python train.py
+```
+
 This script will:
 
-Load and preprocess the dataset.
-Train the encoder-decoder model.
-Save the best-performing model based on validation loss.
-Evaluation
+> Load and preprocess the dataset.
+> Train the encoder-decoder model.
+> Save the best-performing model based on validation loss.
+
+# Evaluation
 Evaluate the model using the test set:
 
-bash
-Copy code
+```bash
 python evaluate.py
+```
+
 This will compute and display metrics such as MAE, RMSE, SILog, and threshold accuracies.
 
-Visualization
+# Visualization
 To visualize the training and validation loss:
 
-python
-Copy code
+```bash
 import matplotlib.pyplot as plt
 
 plt.figure()
@@ -93,20 +97,9 @@ plt.ylabel('Loss')
 plt.legend()
 plt.title('Training and Validation Loss')
 plt.show()
-Results
-After training, the best model achieves the following performance on the test set:
-
-Mean Absolute Error (MAE): TBD
-Root Mean Square Error (RMSE): TBD
-Scale-Invariant Logarithmic Error (SILog): TBD
-Accuracy δ < 1.25: TBD
-Accuracy δ < 1.25²: TBD
-Accuracy δ < 1.25³: TBD
-(Note: Replace TBD with your actual results.)
+```
 
 Acknowledgments
 Virtual KITTI Dataset: Virtual KITTI Dataset
 PyTorch: PyTorch Framework
 PyTorch-MSSSIM: Library used for structural similarity loss.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
