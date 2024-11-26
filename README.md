@@ -95,6 +95,10 @@ plt.title('Training and Validation Loss')
 plt.show()
 ```
 
+## Results
+### Test Set Metrics
+![Screenshot 2024-11-27 005605](https://github.com/user-attachments/assets/e67f3207-cbef-48be-8693-96179676b347)
+
 ## Acknowledgments
 - Virtual KITTI Dataset: Virtual KITTI Dataset
 - PyTorch: PyTorch Framework
