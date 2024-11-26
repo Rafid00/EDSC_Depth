@@ -10,6 +10,13 @@ This project implements a monocular depth estimation system for autonomous vehic
 - **Early Stopping**: Stops training automatically when validation loss stops improving.
 - **Evaluation Metrics**: Computes MAE, RMSE, SILog, and threshold accuracies (δ < 1.25, δ < 1.25², δ < 1.25³).
 
+## Visual Results
+### Before Training:
+![image](https://github.com/user-attachments/assets/2ffacb2e-28b7-45ee-962e-7f8622ab708d)
+### After Training:
+![Screenshot 2024-11-27 004419](https://github.com/user-attachments/assets/bb3a14ad-10bf-4be6-8bb7-88218c9d137e)
+![Screenshot 2024-11-27 004441](https://github.com/user-attachments/assets/48cde5a0-67a1-47cc-bc1a-d751cd800472)
+
 ## Table of Contents
 
 - [Installation](#installation)
